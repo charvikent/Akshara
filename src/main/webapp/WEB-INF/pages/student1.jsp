@@ -9,6 +9,7 @@
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/additional-methods.min.js"></script>
+
 <!-- 	<script src="js/chosen.jquery.js"></script> -->
 
 		<!-- Dashboard Wrapper starts -->
@@ -16,7 +17,7 @@
 
 			<!-- Top Bar starts -->
 			<div class="top-bar">
-				<div class="page-title">Add Student</div>
+				<div class="page-title">Add Student1</div>
 			</div>
 			<!-- Top Bar ends -->
 
@@ -220,12 +221,12 @@ $(document).ready(function ()
 											  	<div class="form-group">
 												    <label for="inputPassword3" class="col-sm-4 control-label">Date of Birth <span style="color: red;">*</span></label>
 												    <div class="col-sm-8">
-														<div  id="datetimepicker1" class="input-append input-group dtpicker">
+														<%-- <div  id="datetimepicker1" class="input-append input-group dtpicker">
 															<form:input path="dob1" data-format="yyyy-MM-dd" placeholder="Enter Date of Birth" class="form-control" tabindex="16" required="true"/>
 															<span class="input-group-addon add-on">
 					                                        	<i data-time-icon="fa fa-times" data-date-icon="fa fa-calendar" class="fa fa-calendar"></i>
 					                                      	</span>
-				                                      	</div>
+				                                      	</div> --%>
 														<span class="dob1_error" id="dob1_error"></span>
 													</div>
 											  	</div>
@@ -423,7 +424,7 @@ $(document).ready(function ()
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 
-$(function(){
+ $(function(){
 	$(".dtpicker").datetimepicker({dateFormat: 'dd-M-yyyy'});
 });
 
