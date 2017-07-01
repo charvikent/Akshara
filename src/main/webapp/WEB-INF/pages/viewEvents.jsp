@@ -34,13 +34,6 @@
 										<h5 class="blog-title">Class Creation</h5>
 									</div> -->
 
-<script>
-$(document).ready(function () 
-{
-	
-});
-</script>
-
 				    					 <div class="blog-body">
 										<form:form  commandName="packCmd" method="post" class="form-horizontal" id="student-form" >
 										<div class="row">
@@ -194,6 +187,9 @@ $(document).ready(function ()
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 
+$(function(){
+	$(".dtpicker").datetimepicker({dateFormat: 'dd-M-yyyy'});
+});
 
 	 var listOrders1 = ${allOrders1};
 	if (listOrders1 != "") {
