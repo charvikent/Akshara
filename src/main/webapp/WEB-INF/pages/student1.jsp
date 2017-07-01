@@ -358,7 +358,7 @@ $(document).ready(function ()
 					
 									</div>
 									<div id="showData" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									
+									<input type ="hidden" value="${baseUrl }" id="baseUrl1">
 									</div>
 								</div>
 							</div>
@@ -423,7 +423,7 @@ $(document).ready(function ()
 <!-- <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script> -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-
+var baseUrl2 =$("#baseUrl1").val();
 $(function(){
 	$(".dtpicker").datetimepicker({dateFormat: 'dd-M-yyyy'});
 });
@@ -552,7 +552,9 @@ $('#cancel').click(function () {
 			$("#basicExample td").remove();
 			serviceUnitArray = {};
 			$.each(listOrders,function(i, orderObj) {
-								
+								if(orderObj.imagePath == null){
+									orderObj.imagePath="img/default.png"
+								}
 // 								contactNumber":"wertewrt","mediumId":"16","subjectId":"","name":"0","boardid":"1","gender":null,"className":"","qualifaction":"ewrt","section":""
 								serviceUnitArray[orderObj.studentId] = orderObj;
 								var id = '"' + orderObj.studentId + '"';
@@ -567,7 +569,7 @@ $('#cancel').click(function () {
 										+ "<td title='"+orderObj.studentName+"'>"
 										+ orderObj.studentName
 										+ "</td>"
-										+ "<td class='hidden-sm hidden-xs'><img style='width: 65px;height: 65px;' src='"+orderObj.imagePath+"'/>"
+										+ "<td class='hidden-sm hidden-xs'><img style='width: 65px;height: 65px;' src='"+baseUrl2+"/"+orderObj.imagePath+"'/>"
 										+ "</td>"
 										+ "<td class='hidden-sm hidden-xs' title='"+orderObj.rollNum+"'>"
 										+ orderObj.rollNum
