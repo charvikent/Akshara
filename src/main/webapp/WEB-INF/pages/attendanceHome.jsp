@@ -21,7 +21,7 @@ int hours = cal.get(Calendar.HOUR_OF_DAY);
 
 			<!-- Top Bar starts -->
 			<div class="top-bar">
-				<div class="page-title">Attendance</div>
+				<div class="page-title">Attendance1</div>
 			</div>
 			<!-- Top Bar ends -->
 
