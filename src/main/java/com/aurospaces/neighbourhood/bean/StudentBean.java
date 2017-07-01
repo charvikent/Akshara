@@ -69,6 +69,15 @@ public void setImageName(MultipartFile imageName) {
 	protected Date updatedTime ;
 	protected Date dob ;
 	String dob1;
+	String dob2;
+public String getDob2() {
+		return dob2;
+	}
+
+	public void setDob2(String dob2) {
+		this.dob2 = dob2;
+	}
+
 public String getDob1() {
 		return dob1;
 	}

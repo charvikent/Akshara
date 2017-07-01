@@ -37,6 +37,9 @@ public class AttendanceDao extends BaseAttendanceDao {
 		if (StringUtils.isNotBlank(objStudentBean.getName())) {
 			objStringBuffer.append("  and  s.name  LIKE '%"+ objStudentBean.getName() +"%'" );
 		}
+		if (StringUtils.isNotBlank(objStudentBean.getDob1()) && StringUtils.isNotBlank(objStudentBean.getDob2()) ) {
+			objStringBuffer.append("  and  Date(att.created_time) BETWEEN '"+objStudentBean.getDob1() +"' AND '"+objStudentBean.getDob2()+"' " );
+		}
 String sql = objStringBuffer.toString();
 			System.out.println(sql);
 			RowValueCallbackHandler handler = new RowValueCallbackHandler(new String[] { "studentId","studentName","absentSection","absentDate","message","className",
