@@ -83,7 +83,7 @@
 												<div class="form-group">
 												    <label for="inputEmail3" class="col-sm-4 control-label">Medium</label>
 												    <div class="col-sm-8">
-														<form:select path="medium" tabindex="4" onchange="searchStudent();" class="form-control" required="true">
+														<form:select path="medium" tabindex="4" onchange="searchStudent();" class="form-control">
 															<form:option value="">-- Choose Medium --</form:option>
 															<form:options items="${mediam}"></form:options>
 														</form:select>
@@ -94,20 +94,27 @@
 											</div>
 											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 												<div class="form-group">
-												    <label for="inputEmail3" class="col-sm-4 control-label">Medium</label>
+												    <label for="inputEmail3" class="col-sm-4 control-label">From (date):</label>
 												    <div class="col-sm-8">
-														<input id="dob1" type="text">
-														<span class="medium_error" id="medium_error"></span>
+														<input class="form-control" id="dob1" type="text">
+														<span class="dob1_error" id="dob1_error"></span>
 													</div>
 												</div>
 											</div>
-											
+										</div>
+										<div class="row">
 											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 												<div class="form-group">
-												    <label for="inputEmail3" class="col-sm-4 control-label">Medium</label>
+												    <label for="inputEmail3" class="col-sm-4 control-label">to (date):</label>
 												    <div class="col-sm-8">
-														<input id="dob2" type="text">
-														<span class="medium_error" id="medium_error"></span>
+												    	<div  id="datetimepicker1" class="input-append input-group dtpicker">
+															<form:input path="dob1" data-format="yyyy-MM-dd" placeholder="Enter Date of Birth" class="form-control" tabindex="16" required="true"/>
+															<span class="input-group-addon add-on">
+					                                        	<i data-time-icon="fa fa-times" data-date-icon="fa fa-calendar" class="fa fa-calendar"></i>
+					                                      	</span>
+				                                      	</div>
+														<input class="form-control" id="dob2" type="text">
+														<span class="dob2_error" id="dob2_error"></span>
 													</div>
 												</div>
 												<form:hidden path="id" />

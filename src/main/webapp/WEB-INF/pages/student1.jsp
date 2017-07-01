@@ -17,7 +17,7 @@
 
 			<!-- Top Bar starts -->
 			<div class="top-bar">
-				<div class="page-title">Add Student1</div>
+				<div class="page-title">Add Student</div>
 			</div>
 			<!-- Top Bar ends -->
 
@@ -221,12 +221,12 @@ $(document).ready(function ()
 											  	<div class="form-group">
 												    <label for="inputPassword3" class="col-sm-4 control-label">Date of Birth <span style="color: red;">*</span></label>
 												    <div class="col-sm-8">
-														<%-- <div  id="datetimepicker1" class="input-append input-group dtpicker">
+														<div  id="datetimepicker1" class="input-append input-group dtpicker">
 															<form:input path="dob1" data-format="yyyy-MM-dd" placeholder="Enter Date of Birth" class="form-control" tabindex="16" required="true"/>
 															<span class="input-group-addon add-on">
 					                                        	<i data-time-icon="fa fa-times" data-date-icon="fa fa-calendar" class="fa fa-calendar"></i>
 					                                      	</span>
-				                                      	</div> --%>
+				                                      	</div>
 														<span class="dob1_error" id="dob1_error"></span>
 													</div>
 											  	</div>

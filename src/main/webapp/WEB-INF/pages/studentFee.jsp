@@ -628,7 +628,7 @@ $("#fee-form").validate({
 						var  popuptitle=null;
 						$.each(response, function(i, tests) {		
 						
-								 var stockInformation1 ="<table align='center' class='table table-stripped table-bordered table-condensed' id='stockInformationTable' style='font-family: sans-serif;'>" 
+								 var stockInformation1 ="<table align='center' class='table table-stripped table-bordered table-condensed' id='stockInformationTable' style='font-family: Baskerville Old Face, cursive;font-size: 18px;'>" 
 						
 									 		+"<tr><td colspan='2'><img src='img/ABV-header.png' style='width: 100%;'></td></tr>"
 									 		+"<tr style='height: 35px;'><td colspan='2'><span style='float: right;font-size: normal;color: blue;'>Date: "+tests.created_time+"</span></td></tr>"
