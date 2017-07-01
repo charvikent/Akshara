@@ -1,0 +1,130 @@
+.column{
+	width:32.8%;
+	margin-right:.5%;
+	min-height:300px;
+	background:#fff;
+	float:left;
+}
+.column .dragbox{
+	margin:5px 2px  20px;
+	background:#fff;
+	position:relative;
+	border:1px solid #ddd;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.column .dragbox h2{
+	margin:0;
+	font-size:12px;
+	padding:5px;
+	background:#6B78A3;
+	color:#fff;
+	border-bottom:1px solid #eee;
+	font-family:Verdana;
+	cursor:move;
+}
+.dragbox-content{
+	background:#fff;
+	height:145px; padding:5px;
+	font-family:'Lucida Grande', Verdana; font-size:0.8em; line-height:1.5em;
+	background: #E6E6CE;
+	overflow: auto;
+}
+.column  .placeholder{
+	background: #f0f0f0;
+	border:1px dashed #ddd;
+}
+.dragbox h2.collapse{
+	background:#f0f0f0 url('collapse.png') no-repeat top right;
+}
+.dragbox h2 .configure{
+	font-size:11px; font-weight:normal;
+	margin-right:30px; float:right;
+}
+/** Custom **/
+.productDropDiv{
+	/* text-align: center; */
+}
+.dropLabel{
+	padding-right: 10px;
+	font-size: 12px;
+}
+.dragbox-content table tr {
+	 /* background-color: #F9F9F9; */
+}
+.dragbox-content table tr th{
+	min-height: 20px;
+	padding: 5px;
+	font-size: 14px;
+}
+.dragbox-content table tr td{
+	min-height: 20px;
+	padding: 5px;
+	font-size: 12px;
+}
+.imagesClass{
+	width: 100%;
+	height: 75%;
+}
+.dateinput{
+	width: 85px;
+}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.blinkClass {
+    -webkit-animation: blink 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 1s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 1s;
+    -o-animation-iteration-count: infinite;
+    padding-left: 5px;
+    width: 12px;
+	height: 12px;
+}
+.spacerDiv{
+	min-height: 470px;
+}
+.productsDropDown{
+	width: 218px;
+	float: left;
+	line-height: 24px;
+	color: #333333;
+	border: #bbbbbb solid 1px;
+	height: 26px;
+	padding: 2px 0px;
+}
+.dashBoardDateField{
+	width: 100px;
+}
