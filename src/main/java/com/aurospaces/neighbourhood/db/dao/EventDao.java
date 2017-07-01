@@ -31,6 +31,9 @@ public class EventDao extends BaseEventDao {
 		if (StringUtils.isNotBlank(objStudentBean.getMedium())) {
 			objStringBuffer.append(" and m.id=" + objStudentBean.getMedium());
 		}
+		if (StringUtils.isNotBlank(objStudentBean.getDob1()) && StringUtils.isNotBlank(objStudentBean.getDob2() )) {
+			objStringBuffer.append("  and  Date(nt.created_time) BETWEEN '"+objStudentBean.getDob1() +"' AND '"+objStudentBean.getDob2()+"' " );
+		}
 		
 String sql = objStringBuffer.toString();
 			System.out.println(sql);

@@ -258,6 +258,9 @@ $('#cancel').click(function () {
 							listOrders,
 							function(i, orderObj) {
 								
+								if(orderObj.imagePath == null){
+									orderObj.imagePath="img/default.png"
+								}
 // 								contactNumber":"wertewrt","mediumId":"16","subjectId":"","name":"0","boardid":"1","gender":null,"className":"","qualifaction":"ewrt","section":""
 								serviceUnitArray[orderObj.studentId] = orderObj;
 								var id = '"' + orderObj.studentId + '"';
@@ -271,7 +274,7 @@ $('#cancel').click(function () {
 										+ "<td title='"+orderObj.studentName+"'>"
 										+ orderObj.studentName
 										+ "</td>"
-										+ "<td class='hidden-sm hidden-xs'><img style='width: 65px;height: 65px;' src='"+baseUrl2+"/"+orderObj.imagePath+"'/>"
+										+ "<td  class='hidden-sm hidden-xs'><img style='width: 65px;height: 65px;' src='"+baseUrl2+"/"+orderObj.imagePath+"'/>"
 										+ "</td>"
 										+ "<td class='hidden-sm hidden-xs' title='"+orderObj.rollNum+"'>"
 										+ orderObj.rollNum
