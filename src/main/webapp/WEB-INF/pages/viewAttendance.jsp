@@ -96,7 +96,12 @@
 												<div class="form-group">
 												    <label for="inputEmail3" class="col-sm-4 control-label">From (date):</label>
 												    <div class="col-sm-8">
-														<input class="form-control" id="dob1" type="text">
+												    	<div  id="datetimepicker1" class="input-append input-group dtpicker">
+															<input data-format="yyyy-MM-dd" placeholder="Enter from Date" class="form-control" id="dob1" type="text">
+															<span class="input-group-addon add-on">
+					                                        	<i data-time-icon="fa fa-times" data-date-icon="fa fa-calendar" class="fa fa-calendar"></i>
+					                                      	</span>
+				                                      	</div>
 														<span class="dob1_error" id="dob1_error"></span>
 													</div>
 												</div>
@@ -108,12 +113,11 @@
 												    <label for="inputEmail3" class="col-sm-4 control-label">to (date):</label>
 												    <div class="col-sm-8">
 												    	<div  id="datetimepicker1" class="input-append input-group dtpicker">
-															<form:input path="dob1" data-format="yyyy-MM-dd" placeholder="Enter Date of Birth" class="form-control" tabindex="16" required="true"/>
+															<input data-format="yyyy-MM-dd" placeholder="Enter to Date" class="form-control" id="dob2" type="text">
 															<span class="input-group-addon add-on">
 					                                        	<i data-time-icon="fa fa-times" data-date-icon="fa fa-calendar" class="fa fa-calendar"></i>
 					                                      	</span>
 				                                      	</div>
-														<input class="form-control" id="dob2" type="text">
 														<span class="dob2_error" id="dob2_error"></span>
 													</div>
 												</div>
@@ -196,6 +200,9 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 
+$(function(){
+	$(".dtpicker").datetimepicker({dateFormat: 'dd-M-yyyy'});
+});
 
 	 var listOrders1 = ${allOrders1};
 	if (listOrders1 != "") {
