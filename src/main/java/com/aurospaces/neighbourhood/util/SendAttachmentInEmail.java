@@ -1,5 +1,6 @@
 package com.aurospaces.neighbourhood.util;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
@@ -19,9 +20,10 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.servlet.http.HttpServletRequest;
 
 public class SendAttachmentInEmail {
-   public static void send(String to ,final String from ,final String password,String port) {
+   public static void send(String to ,final String from ,final String password,String port,HttpServletRequest request) {
       // Recipient's email ID needs to be mentioned.
        to = "andraju.kotaiah@gmail.com";
 
@@ -78,7 +80,9 @@ public class SendAttachmentInEmail {
 
          // Part two is attachment
          messageBodyPart = new MimeBodyPart();
-         String filename = "D://backup1.sql";
+         String rootPath = request.getSession().getServletContext().getRealPath("/");
+	        File dir = new File(rootPath + File.separator + "img");
+         String filename = "backup1.sql";
          DataSource source = new FileDataSource(filename);
          messageBodyPart.setDataHandler(new DataHandler(source));
          messageBodyPart.setFileName(filename);
