@@ -40,7 +40,7 @@
 											  	<div class="form-group">
 											    	<label for="inputEmail3" class="col-sm-4 control-label">Student Name</label>
 											    	<div class="col-sm-8">
-														<form:input path="name" placeholder="Enter Student Name" class="form-control" tabindex="2" />
+														<form:input path="name" placeholder="Enter Student Name" class="form-control" tabindex="1" />
 													</div>
 												</div>
 											</div>
@@ -48,7 +48,7 @@
 											  	<div class="form-group">
 											    	<label for="inputPassword3" class="col-sm-4 control-label">Board</label>
 											    	<div class="col-sm-8">
-														<form:select path="boardName" class="form-control" tabindex="3" onchange="searchStudent(),classNameFilter()" >
+														<form:select path="boardName" class="form-control" tabindex="2" onchange="searchStudent(),classNameFilter()" >
 															<form:option value="" >-- Choose Board --</form:option>
 															<form:options items="${board}"></form:options>
 														</form:select>
@@ -72,7 +72,7 @@
 											  	<div class="form-group">
 												    <label for="inputPassword3" class="col-sm-4 control-label">Section</label>
 												    <div class="col-sm-8">
-														<form:select path="section" class="form-control" tabindex="6"  onchange="searchStudent(),mediumFilter()">
+														<form:select path="section" class="form-control" tabindex="4"  onchange="searchStudent(),mediumFilter()">
 															<form:option value="">-- Choose Section --</form:option>
 															<form:options items="${allSection}"></form:options>
 														</form:select>
@@ -83,7 +83,7 @@
 												<div class="form-group">
 												    <label for="inputEmail3" class="col-sm-4 control-label">Medium</label>
 												    <div class="col-sm-8">
-														<form:select path="medium" tabindex="4" onchange="searchStudent();" class="form-control">
+														<form:select path="medium" tabindex="5" onchange="searchStudent();" class="form-control">
 															<form:option value="">-- Choose Medium --</form:option>
 															<form:options items="${mediam}"></form:options>
 														</form:select>
@@ -97,7 +97,7 @@
 												    <label for="inputEmail3" class="col-sm-4 control-label">From (date):</label>
 												    <div class="col-sm-8">
 												    	<div  id="datetimepicker1" class="input-append input-group dtpicker">
-															<input data-format="yyyy-MM-dd" placeholder="Enter from Date" class="form-control" id="dob1" type="text">
+															<input data-format="yyyy-MM-dd" placeholder="Enter from Date" class="form-control" id="dob1" type="text" tabindex="6">
 															<span class="input-group-addon add-on">
 					                                        	<i data-time-icon="fa fa-times" data-date-icon="fa fa-calendar" class="fa fa-calendar"></i>
 					                                      	</span>
@@ -113,7 +113,7 @@
 												    <label for="inputEmail3" class="col-sm-4 control-label">to (date):</label>
 												    <div class="col-sm-8">
 												    	<div  id="datetimepicker1" class="input-append input-group dtpicker">
-															<input data-format="yyyy-MM-dd" placeholder="Enter to Date" class="form-control" id="dob2" type="text">
+															<input data-format="yyyy-MM-dd" placeholder="Enter to Date" class="form-control" id="dob2" type="text" tabindex="7">
 															<span class="input-group-addon add-on">
 					                                        	<i data-time-icon="fa fa-times" data-date-icon="fa fa-calendar" class="fa fa-calendar"></i>
 					                                      	</span>
@@ -128,8 +128,8 @@
 											<div class="col-sm-8 col-sm-offset-4">
 											  	<div class="form-group">
 												  	<div class="col-sm-8 col-sm-offset-2">
-														<input type="button" class="btn btn-success" value="Search" onclick="searchStudent()" tabindex="22"/>
-														<input type="reset" class="btn btn-danger" id="cancel" tabindex="23"/>
+														<input type="button" class="btn btn-success" value="Search" onclick="searchStudent()" tabindex="8"/>
+<!-- 														<input type="reset" class="btn btn-danger" id="cancel" tabindex="9"/> -->
 													</div>
 											   	</div>
 											 </div>
