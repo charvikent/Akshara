@@ -118,13 +118,13 @@
 												<div class="form-group">
 											  		<div class="col-sm-8 col-sm-offset-2">
 														<input type="button" class="btn btn-success" value="Search" onclick="searchStudent()" tabindex="8"/>
-														<input type="reset" class="btn btn-danger" id="cancel" tabindex="9"/>
+<!-- 														<input type="reset" class="btn btn-danger" id="cancel" tabindex="9"/> -->
 													</div>
 											   	</div>
 										   	</div>
 										</div>
 										</form:form>
-									</div> 
+									</div>
 								</div>
 							</div>
 						</div>
