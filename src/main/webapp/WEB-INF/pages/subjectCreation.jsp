@@ -39,13 +39,13 @@
 			
 									<form:form action="addSubject.htm" commandName="packCmd" method="post" id="cls-form" class="form-horizontal">
 											<div class="form-group">
-											    <label for="inputEmail3" class="col-sm-4 control-label">Subjects</label>
-											    <div class="col-lg-6 col-md-6 col-sm-8">
-													<form:input path="name" class="form-control " tabindex="1" placeholder="Enter Subjects" required="true"/>
+											    <label for="inputEmail3" class="col-sm-4 control-label">Subject</label>
+											    <div class="col-lg-4 col-md-4 col-sm-8">
+													<form:input path="name" class="form-control " tabindex="1" placeholder="Enter Subject Name" required="true"/>
 													<span class="name_error" id="name_error"></span>
 												</div>
 											</div>
-											<form:hidden path="id" tabindex="1" />
+											<form:hidden path="id"/>
 												<div class="form-group">
 												  	<div class="col-sm-8 col-sm-offset-4">
 													<input type="submit" class="btn btn-success" tabindex="2"/>
@@ -178,7 +178,7 @@ $("#cls-form").validate(
 								serviceUnitArray[orderObj.subjectId] = orderObj;
 								var tblRow = "<tr align='center' role='row' class='odd'>"  
 
-										+ "<td class='hidden-sm hidden-xs' title='"+orderObj.name+"' >"
+										+ "<td class='' title='"+orderObj.name+"' >"
 										+ orderObj.name
 										+ "</td>"
 										+ "<td>"
