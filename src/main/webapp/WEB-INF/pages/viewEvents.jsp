@@ -240,10 +240,12 @@ $(function(){
 		var className = $('#className').val();
 		var section = $('#section').val();
 		var medium = $('#medium').val();
+		var dob1 =$("#dob1").val();
+		var dob2 =$("#dob2").val();
 		$.ajax({
 			type : "POST",
 			url : "filterEvent.json",
-			data : "boardName=" + boardName+"&className="+className+"&section="+section+"&medium="+medium,
+			data : "boardName=" + boardName+"&className="+className+"&section="+section+"&medium="+medium+"&dob1="+dob1+"&dob2="+dob2,
 			success : function(response) {
 // 				 alert(response); 
 				 displayTable(response);
