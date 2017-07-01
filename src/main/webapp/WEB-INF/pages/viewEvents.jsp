@@ -44,60 +44,92 @@ $(document).ready(function ()
 				    					 <div class="blog-body">
 										<form:form  commandName="packCmd" method="post" class="form-horizontal" id="student-form" >
 										<div class="row">
-											<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">	
+											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">	
 										  		<div class="form-group">
 												    <label for="inputPassword3" class="col-sm-4 control-label">Board Name</label>
 												    <div class="col-sm-8">
-														<form:select path="boardName" class="form-control" tabindex="3" onchange="searchStudent(),classNameFilter()" >
+														<form:select path="boardName" class="form-control" tabindex="1" onchange="searchStudent(),classNameFilter()" >
 															<form:option value="" >-- Choose Board --</form:option>
 															<form:options items="${board}"></form:options>
 														</form:select>
 													</div>
 										  		</div>
 										  	</div>
-											<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 										  		<div class="form-group">
 												    <label for="inputPassword3" class="col-sm-4 control-label">Class Name</label>
 												    <div class="col-sm-8">
-														<form:select path="className" class="form-control" tabindex="3" onchange="searchStudent(),sectionFilter()" >
+														<form:select path="className" class="form-control" tabindex="2" onchange="searchStudent(),sectionFilter()" >
 															<form:option value="" >-- Choose Class --</form:option>
 															<form:options items="${allClasses}"></form:options>
 														</form:select>
 													</div>
 										  		</div>
 										  	</div>
-										</div>
-										<div class="row">
-											<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 										  		<div class="form-group">
 										    		<label for="inputPassword3" class="col-sm-4 control-label">Section</label>
 										    		<div class="col-sm-8">
-														<form:select path="section" class="form-control" tabindex="6"  onchange="searchStudent(),mediumFilter()">
+														<form:select path="section" class="form-control" tabindex="3"  onchange="searchStudent(),mediumFilter()">
 															<form:option value="">-- Choose Section --</form:option>
 															<form:options items="${allSection}"></form:options>
 														</form:select>
 													</div>
 										  		</div>
 										  	</div>
-											<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+										</div>
+										<div class="row">
+											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 											  	<div class="form-group">
-											    	<label for="inputPassword3" class="col-sm-4 control-label">Medium <span style="color: red;">*</span></label>
+											    	<label for="inputPassword3" class="col-sm-4 control-label">Medium</label>
 												    <div class="col-sm-8">
-														<form:select path="medium" class="form-control" tabindex="5" onchange="searchStudent()" required="true">
+														<form:select path="medium" class="form-control" tabindex="4" onchange="searchStudent()">
 															<form:option value="">-- Choose Medium --</form:option>
 															<form:options items="${mediam}"></form:options>
 														</form:select>
 													</div>
 											 	</div>
 											</div>
-										</div>
-										  <form:hidden path="id" />
-											<!-- <div class="form-group">
-										  		<div class="col-sm-8 col-sm-offset-4">
-													<input type="button" class="btn btn-success" value="Search" onclick="searchStudent()" tabindex="22"/>
-													<input type="reset" class="btn btn-danger" id="cancel" tabindex="23"/>
+											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+												<div class="form-group">
+												    <label for="inputEmail3" class="col-sm-4 control-label">From (date):</label>
+												    <div class="col-sm-8">
+												    	<div  id="datetimepicker1" class="input-append input-group dtpicker">
+															<input data-format="yyyy-MM-dd" placeholder="Enter from Date" class="form-control" id="dob1" type="text" tabindex="6">
+															<span class="input-group-addon add-on">
+					                                        	<i data-time-icon="fa fa-times" data-date-icon="fa fa-calendar" class="fa fa-calendar"></i>
+					                                      	</span>
+				                                      	</div>
+														<span class="dob1_error" id="dob1_error"></span>
+													</div>
 												</div>
-										   </div> -->
+											</div>
+											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+												<div class="form-group">
+												    <label for="inputEmail3" class="col-sm-4 control-label">to (date):</label>
+												    <div class="col-sm-8">
+												    	<div  id="datetimepicker1" class="input-append input-group dtpicker">
+															<input data-format="yyyy-MM-dd" placeholder="Enter to Date" class="form-control" id="dob2" type="text" tabindex="6">
+															<span class="input-group-addon add-on">
+					                                        	<i data-time-icon="fa fa-times" data-date-icon="fa fa-calendar" class="fa fa-calendar"></i>
+					                                      	</span>
+				                                      	</div>
+														<span class="dob2_error" id="dob2_error"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 col-sm-offset-4">
+											  	<form:hidden path="id" />
+												<div class="form-group">
+											  		<div class="col-sm-8 col-sm-offset-2">
+														<input type="button" class="btn btn-success" value="Search" onclick="searchStudent()" tabindex="8"/>
+														<input type="reset" class="btn btn-danger" id="cancel" tabindex="9"/>
+													</div>
+											   	</div>
+										   	</div>
+										</div>
 										</form:form>
 									</div> 
 								</div>
