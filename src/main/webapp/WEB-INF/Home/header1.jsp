@@ -114,7 +114,7 @@ String url =request.getScheme() + "://" + request.getServerName() +      ":" +  
 						</ul>
 					</li>
 					<li class='has-sub'>
-						<a href='#'><i class="fa fa-tasks"></i><span>Student Details </span></a>
+						<a href='#'><i class="fa fa-users"></i><span>Student Details </span></a>
 						<ul>
 							<li><a href='#' id="addStudent" onclick="addStudent();"><span>Add Student</span></a></li>
 							<li><a href='#' id="viewStudent" onclick="viewStudent();"><span>View Student</span></a></li>
@@ -125,7 +125,7 @@ String url =request.getScheme() + "://" + request.getServerName() +      ":" +  
 						</ul>
 					</li>
 					<li class='has-sub'>
-						<a href='#'><i class="fa fa-file-o"></i><span>Message</span></a>
+						<a href='#'><i class="fa fa-envelope-open-o"></i><span>Message</span></a>
 						<ul>
 							<li><a href='#' id="messageDisplayId" onclick="messageDisplay()"><span>Attendance</span></a></li>
 							
@@ -135,7 +135,7 @@ String url =request.getScheme() + "://" + request.getServerName() +      ":" +  
 						</ul>
 					</li>
 					<li class=''>
-						<a href='#' onclick="backUpdata()"><i class="fa fa-arrow"></i><span>BackupData</span></a>
+						<a href='#' onclick="backUpdata()"><i class="fa fa-database"></i><span>BackupData</span></a>
 						
 					</li>
 				</ul>
