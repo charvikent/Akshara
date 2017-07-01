@@ -340,7 +340,7 @@ $("#fee-form").validate({
 								var id = '"' + orderObj.id + '"';
 								var tblRow = "<tr align='center' role='row' class='odd'>" 
 										+ "<td>"
-										+ '<a data-toggle="modal" data-target="#myModal" data-keyboard="false" data-backdrop="static" onclick=popupOpen('+orderObj.id+')>'
+										+ '<a style="cursor: pointer;" title="View Fee Receipt" data-toggle="modal" data-target="#myModal" data-keyboard="false" data-backdrop="static" onclick=popupOpen('+orderObj.id+')>'
 										+ '<b>'+ orderObj.studentName+  '</b></a>' + '</td>'
 										+ "<td class='hidden-sm hidden-xs' title='"+orderObj.fatherName+"'>"
 										+ orderObj.fatherName
