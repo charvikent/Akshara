@@ -92,6 +92,26 @@
 												</div>
 												<form:hidden path="id" />
 											</div>
+											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+												<div class="form-group">
+												    <label for="inputEmail3" class="col-sm-4 control-label">Medium</label>
+												    <div class="col-sm-8">
+														<input id="dob1" type="text">
+														<span class="medium_error" id="medium_error"></span>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+												<div class="form-group">
+												    <label for="inputEmail3" class="col-sm-4 control-label">Medium</label>
+												    <div class="col-sm-8">
+														<input id="dob2" type="text">
+														<span class="medium_error" id="medium_error"></span>
+													</div>
+												</div>
+												<form:hidden path="id" />
+											</div>
 										</div>
 										<div class="row">
 											<div class="col-sm-8 col-sm-offset-4">
@@ -224,10 +244,12 @@
 		var section = $('#section').val();
 		var name = $('#name').val();
 		var medium =$("#medium").val();
+		var dob1 =$("#dob1").val();
+		var dob2 =$("#dob2").val();
 		$.ajax({
 			type : "POST",
 			url : "filterAttendance.json",
-			data : "boardName=" + boardName+"&studentName="+studentName+"&className="+className+"&section="+section+"&name="+name+"&medium="+medium,
+			data : "boardName=" + boardName+"&studentName="+studentName+"&className="+className+"&section="+section+"&name="+name+"&medium="+medium+"&dob1="+dob1+"&dob2="+dob2,
 			success : function(response) {
 // 				 alert(response); 
 				 displayTable(response);
