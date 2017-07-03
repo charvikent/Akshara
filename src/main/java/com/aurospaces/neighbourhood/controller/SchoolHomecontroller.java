@@ -1850,7 +1850,7 @@ try {
 //			e.printStackTrace();
 //			System.out.println(e);
 			logger.error(e.getMessage());
-			logger.fatal("error in userLogin method in school Homecontroller class upCommingBirthDay method");
+			logger.fatal("error in userLogin method in school Homecontroller class viewEvents method");
 		}
 
 		return "viewEventsHome";  
@@ -1881,8 +1881,10 @@ try {
 			}*/
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class filterEvent method");
 		}
 
 		return eventDao.getEvents(objStudentBean);  
@@ -1910,7 +1912,10 @@ try {
 				 request.setAttribute("allOrders1", "''");
 			}
 		}catch(Exception e){
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class upCommingBirthDayJson method");
 		}
 	  return sJson;
 
@@ -2003,8 +2008,10 @@ try {
 
 
 		} catch (Exception e) {
-			e.printStackTrace();
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class sendEvent method");
 			message1 = "fail";
 			session.setAttribute("message", "Fail to Send Message/Email");
 		} finally {
@@ -2038,8 +2045,10 @@ try {
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class subjectHome method");
 		}
 
 		return "subjectHome";  
@@ -2080,8 +2089,10 @@ try {
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class addSubject method");
 			session.setAttribute("message", "Failed");
 		}
 
@@ -2112,8 +2123,10 @@ try {
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class deleteSubject method");
 		}
 
 		return sJson;  
