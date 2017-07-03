@@ -14,9 +14,7 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.aurospaces.neighbourhood.bean.FacultyBean;
 import com.aurospaces.neighbourhood.bean.FacultySubjectsBean;
-import com.aurospaces.neighbourhood.db.model.AdminDiscount;
 
 
 public class BaseFacultySubjects{

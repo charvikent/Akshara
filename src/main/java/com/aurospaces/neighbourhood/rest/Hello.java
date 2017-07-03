@@ -3,24 +3,11 @@
  */
 package com.aurospaces.neighbourhood.rest;
 
-/**
- * @author YOGI
- *
- */
-import java.util.List;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.aurospaces.neighbourhood.bean.CustomerBean;
-import com.aurospaces.neighbourhood.dao.CustomerDao;
-import com.aurospaces.neighbourhood.service.CustomerService;
-import com.aurospaces.neighbourhood.service.CustomerServiceImpl;
 
 // Plain old Java Object it does not extend as class or implements 
 // an interface

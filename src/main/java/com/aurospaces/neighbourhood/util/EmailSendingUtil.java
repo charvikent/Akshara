@@ -25,11 +25,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.aurospaces.neighbourhood.bean.LoginBean;
-import com.aurospaces.neighbourhood.bean.OrderBean;
-import com.aurospaces.neighbourhood.bean.VendorRegistrationBean;
 import com.aurospaces.neighbourhood.daosupport.DaoSupport;
-import com.aurospaces.neighbourhood.db.dao.OrderInfo1Dao;
-import com.aurospaces.neighbourhood.db.model.OrderInfo1;
 
 /**
  * @author YOGI
@@ -37,10 +33,11 @@ import com.aurospaces.neighbourhood.db.model.OrderInfo1;
  */
 public class EmailSendingUtil extends DaoSupport {
 Logger objLogger = Logger.getLogger(EmailSendingUtil.class);
-@Autowired
-OrderInfo1Dao orderInfo1Dao;
+/*@Autowired
+OrderInfo1Dao orderInfo1Dao;*/
 	public String sendOrderReportToAdmin(LoginBean login, String proppath,
 			String imagespath) {
+				return imagespath;/*
 		String reslutString = null;
 		String toAddress = null;
 		String ccAddress = null;
@@ -54,7 +51,7 @@ OrderInfo1Dao orderInfo1Dao;
 		DateFormat objDateFormate = new SimpleDateFormat("dd,MMM yyyy");
 		try {
 			StringBuffer stringBuffer = new StringBuffer();
-			/* String propertiespath = "D:/email.properties"; */
+			 String propertiespath = "D:/email.properties"; 
 
 			String propertiespath = proppath;
 			System.out.println("properties path" + propertiespath);
@@ -76,7 +73,7 @@ OrderInfo1Dao orderInfo1Dao;
 			toAddress = "ayogendra10@gmail.com";
 			ccAddress = "yogendra@aurospaces.com";
 			bccAddress = "yogendra@aurospaces.com";
-			/*
+			
 			 * Iterator<SaleProductVo> saleiterator =
 			 * branchWiseReportsBean.getHeighstSaleProductList().iterator();
 			 * Iterator<StockProductVo> stockiterator =
@@ -100,8 +97,8 @@ OrderInfo1Dao orderInfo1Dao;
 			 * "</td></tr></table></div></td>" +
 			 * "<td style=\"width:13%\"><div style=\"width:98%;height:100px;\"><table style=\"width:100%;height: 100%;border: 1px solid #FFA500;border-spacing: 0px;\"><tr style=\"height: 50px;background-color: #FFA500;\"><td style=\"vertical-align:middle;color: white;\">Heighest Sale product</td></tr><tr style=\"height: 50px;background-color: white;\"><td>"
 			 * );
-			 */
-			/*
+			 
+			
 			 * while (saleiterator.hasNext()) { SaleProductVo saleProductVo2 =
 			 * (SaleProductVo) saleiterator .next();
 			 * stringBuffer.append("<li>"+saleProductVo2
@@ -112,7 +109,7 @@ OrderInfo1Dao orderInfo1Dao;
 			 * stockProductVo2 = (StockProductVo) stockiterator .next();
 			 * stringBuffer
 			 * .append("<li>"+stockProductVo2.getProductName()+"</li>"); }
-			 */
+			 
 			
 			stringBuffer
 					.append("</table></div>"
@@ -126,10 +123,10 @@ OrderInfo1Dao orderInfo1Dao;
 					mapInlineImages);
 			reslutString = "success";
 		} catch (Exception e) {
-			/*
+			
 			 * logger.error(e.getMessage());
 			 * logger.fatal("error in getBranchMaxId() in BranchDaoImpl class");
-			 */
+			 
 			reslutString = "fail";
 			e.printStackTrace();
 		}
@@ -188,7 +185,7 @@ OrderInfo1Dao orderInfo1Dao;
 			stringBuffer.append("<div><p>Your order is given below</p></div>");
 			stringBuffer
 					.append("<table style=\"width: 100%;text-align:center;font-weight: bold;\">");
-			/*
+			
 			 * List<MedicineBean> listMedicineBeans =
 			 * objVendorBean.getListMedicineBeans(); //Iterator<MedicineBean>
 			 * stockiterator = listMedicineBeans.iterator(); for(MedicineBean
@@ -199,7 +196,7 @@ OrderInfo1Dao orderInfo1Dao;
 			 * "<td >"+objBean.getDosage()+"</td>" +
 			 * "<td >"+objBean.getQuantity()+"</td>" +
 			 * "<td >"+objBean.getOrderId()+"</td>"); }
-			 */
+			 
 			stringBuffer.append("</td></tr></table></div></td>");
 
 			stringBuffer
@@ -221,7 +218,7 @@ OrderInfo1Dao orderInfo1Dao;
 		return reslutString;
 	}
 
-	/*public String sendCustomerReport(OrderBean objOrderBean,
+	public String sendCustomerReport(OrderBean objOrderBean,
 			ServletContext objContext, String sMailTo) throws AddressException,
 			MessagingException, IOException {
 		String reslutString = null;
@@ -373,7 +370,7 @@ OrderInfo1Dao orderInfo1Dao;
 		}finally{
 		}
 		return reslutString = "success";
-	}*/
+	}
 	
 	public String sendEmail(OrderInfo1 objOrderBean,
 			ServletContext objContext, String sMailTo) throws AddressException,
@@ -538,7 +535,7 @@ OrderInfo1Dao orderInfo1Dao;
 							mapInlineImages);
 					
 				}
-				/*if("vendor".equals(sMailTo)){
+				if("vendor".equals(sMailTo)){
 					mailContent = prop.getProperty("vendor_mail_content");
 					mailContent = mailContent.replace("_phone_", objOrderBean.getContactNo());
 					mailContent = mailContent.replace("_name_", objOrderBean.getVendorName());
@@ -610,7 +607,7 @@ OrderInfo1Dao orderInfo1Dao;
 					EmbeddedImageEmailUtil.send(host, port, userName, password, toAddress,
 							ccAddress, bccAddress, "Customer Feedback", mailContent,
 							mapInlineImages);
-				}*/
+				}
 			}
 			htmlBody = stringBuffer.toString();
 			System.out.println(mailContent);
@@ -637,7 +634,7 @@ OrderInfo1Dao orderInfo1Dao;
 		System.out.println("one");
 		EmailSendingUtil objEmailSendingUtil = new EmailSendingUtil();
 		//objEmailSendingUtil.sendCustomerReport(obBean, null);
-		/*objEmailSendingUtil.cronEmailForOrderDetails("/home/yogi/Desktop/Resuefy/NeighbourhoodPlatform/src/main/webapp/Resources/DataBase.properties");*/
+		objEmailSendingUtil.cronEmailForOrderDetails("/home/yogi/Desktop/Resuefy/NeighbourhoodPlatform/src/main/webapp/Resources/DataBase.properties");
 	}
 	
 	
@@ -670,7 +667,7 @@ OrderInfo1Dao orderInfo1Dao;
 		DateFormat objDateFormate = new SimpleDateFormat("dd,MMM yyyy");
 		try {
 			StringBuffer stringBuffer = new StringBuffer();
-			/*String propertiespath = "D:/email.properties";*/
+			String propertiespath = "D:/email.properties";
 			
 			String propertiespath  = proppath;
 			System.out.println("properties path"+propertiespath);
@@ -714,5 +711,5 @@ OrderInfo1Dao orderInfo1Dao;
 		
 		
 		return reslutString;
-	}
+*/	}
 }

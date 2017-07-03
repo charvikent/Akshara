@@ -7,7 +7,6 @@ import org.springframework.jdbc.core.simple.ParameterizedBeanPropertyRowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.aurospaces.neighbourhood.db.basedao.BaseUsersDao;
-import com.aurospaces.neighbourhood.db.model.Partner;
 import com.aurospaces.neighbourhood.db.model.Users;
 
 

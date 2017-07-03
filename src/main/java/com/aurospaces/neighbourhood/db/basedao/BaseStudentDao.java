@@ -16,7 +16,6 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.aurospaces.neighbourhood.bean.StudentBean;
-import com.aurospaces.neighbourhood.db.model.AdminDiscount;
 
 
 public class BaseStudentDao{

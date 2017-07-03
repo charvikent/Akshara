@@ -17,7 +17,6 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.aurospaces.neighbourhood.bean.FacultyBean;
-import com.aurospaces.neighbourhood.db.model.AdminDiscount;
 
 
 public class BaseFacultyDao{
@@ -94,15 +93,7 @@ System.out.println(ps);
 		}
 		
 
-	 public AdminDiscount getById(int id) {
-			String sql = "SELECT * from faculty where id = ? ";
-			List<AdminDiscount> retlist = jdbcTemplate.query(sql,
-			new Object[]{id},
-			ParameterizedBeanPropertyRowMapper.newInstance(AdminDiscount.class));
-			if(retlist.size() > 0)
-				return retlist.get(0);
-			return null;
-		}
+
 
 	
 

@@ -20,9 +20,6 @@ import javax.imageio.ImageIO;
 
 import org.apache.log4j.Logger;
 
-import com.aurospaces.neighbourhood.db.model.Vendor1;
-import com.aurospaces.neighbourhood.patent.GeoMain;
-import com.aurospaces.neighbourhood.patent.GeoTag;
 
 /**
  * @author Amit
@@ -186,16 +183,16 @@ public class NeighbourhoodUtil {
 			return (false);
 		}
 	};
-
+/*
 	public double getLatLong(){
 		GeoMain gm = new GeoMain();
 		  GeoTag latlong =  gm.getAddr("Hsr Layout,Bangalore,Karnataka");
 			return latlong.x;
-	}
-	public static void main(String k[]) {
+	}*/
+/*	public static void main(String k[]) {
 		NeighbourhoodUtil objNeighbourhoodUtil = new NeighbourhoodUtil();
 		System.out.println(objNeighbourhoodUtil.getLatLong());;
-		/*if (dir.isDirectory()) { // make sure it's a directory
+		if (dir.isDirectory()) { // make sure it's a directory
 			for (final File f : dir.listFiles(IMAGE_FILTER)) {
 				BufferedImage img = null;
 
@@ -213,7 +210,7 @@ public class NeighbourhoodUtil {
 					e.printStackTrace();
 				}
 			}
-		}*/
+		}
 
-	}
+	}*/
 }
