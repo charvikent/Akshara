@@ -628,7 +628,7 @@ $("#fee-form").validate({
 						var  popuptitle=null;
 						$.each(response, function(i, tests) {		
 						
-								 var stockInformation1 ="<table align='center' class='table table-stripped table-bordered table-condensed' id='stockInformationTable' style='font-family: Baskerville Old Face, cursive;font-size: 18px;'>" 
+								 var stockInformation1 ="<table align='center' class='table table-stripped table-bordered table-condensed' id='stockInformationTable' style='font-family: Baskerville Old Face, cursive;font-size: 20px;'>" 
 						
 									 		+"<tr><td colspan='2'><img src='img/ABV-header.png' style='width: 100%;'></td></tr>"
 									 		+"<tr style='height: 35px;'><td colspan='2'><span style='float: right;font-size: normal;color: blue;'>Date: "+tests.created_time+"</span></td></tr>"
@@ -637,10 +637,10 @@ $("#fee-form").validate({
 								 			+"<tr style='height: 35px;'><td colspan='2'><b>Father Name: </b>&nbsp;&nbsp;"+tests.fatherName+"</td></tr>"
 								 			+"<tr style='height: 35px;'><td colspan='2'><b>Mobile: </b>&nbsp;&nbsp;"+tests.mobile+"</td></tr>"
 									 		
-								 			+"<tr style='height: 35px;'><td colspan='2'><b>Board: </b>&nbsp;&nbsp;"+tests.boardName+"&nbsp;&nbsp;"
-									 		+"<b>Medium: </b>&nbsp;&nbsp;"+tests.medium+"&nbsp;&nbsp;"
-									 		+"<b>Class: </b>&nbsp;&nbsp;"+tests.className+"&nbsp;&nbsp;"
-									 		+"<b>Section: </b>&nbsp;&nbsp;"+tests.sectionName+"</td></tr>"
+								 			+"<tr style='height: 35px;'><td colspan='2'><b>Board: </b>&nbsp;"+tests.boardName+"&nbsp;"
+									 		+"<b>Medium: </b>&nbsp;"+tests.medium+"&nbsp;&nbsp;"
+									 		+"<b>Class: </b>&nbsp;"+tests.className+"&nbsp;&nbsp;"
+									 		+"<b>Section: </b>&nbsp;"+tests.sectionName+"</td></tr>"
 								 			
 									 		+"<tr style='height: 35px;'><th>Particulars</th><th>Amount</th></tr>"
 									 		
@@ -776,7 +776,7 @@ $("#fee-form").validate({
 	});
 	   
    }
-   var th = ['','thousand','million', 'billion','trillion'];
+   var th = ['','Thousand','million', 'billion','trillion'];
  //uncomment this line for English Number System
  //var th = ['','thousand','million', 'milliard','billion'];
 
@@ -789,7 +789,8 @@ $("#fee-form").validate({
  	str += 'point ';
  	for (var i=x+1; i<y; i++) 
  		str += dg[n[i]] +' ';
- 	} return str.replace(/\s+/g,' ');
- 	}
+ }
+ return str.replace(/\s+/g,' ');
+ }
 
 </script>
