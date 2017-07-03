@@ -110,7 +110,7 @@ public class SchoolHomecontroller {
 	@Autowired SubjectDao subjectDao;
 	/*LoginHome1*/
 	
-	
+	private Logger logger = Logger.getLogger(SchoolHomecontroller.class);
 	@RequestMapping(value = "/HomePage")
 	public String HomePage(@ModelAttribute("packCmd") UsersBean objUsersBean,ModelMap model,HttpServletRequest request,HttpSession session) throws JsonGenerationException, JsonMappingException, IOException {
 		System.out.println("HomePage page...");
@@ -172,6 +172,8 @@ public class SchoolHomecontroller {
 			}
 		}catch(Exception e){
 			e.printStackTrace();
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class HomePage method  ");
 			System.out.println(e);
 			return "loginHome1";
 			
@@ -179,7 +181,7 @@ public class SchoolHomecontroller {
 		return "loginHome1";
 	}
 	@RequestMapping(value = "/LoginHome1")
-	public String HomePage(ModelMap model,HttpServletRequest request,HttpSession session) throws JsonGenerationException, JsonMappingException, IOException {
+	public String HomePage1(ModelMap model,HttpServletRequest request,HttpSession session) throws JsonGenerationException, JsonMappingException, IOException {
 		System.out.println("LoginHome1 page...");
 		UsersBean userBean = null;
 		String name = null;

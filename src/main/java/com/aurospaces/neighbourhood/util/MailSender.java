@@ -37,13 +37,13 @@ public class MailSender {
         properties.put("mail.smtp.port","587");
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
-        properties.put("mail.user","chinta.nitun93@gmail.com");
-        properties.put("mail.password","nitun.kittu");
+        properties.put("mail.user","noreply1445@gmail.com");
+        properties.put("mail.password","14451445");
  
         // creates a new session with an authenticator
         Authenticator auth = new Authenticator() {
             public PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("chinta.nitun93@gmail.com","nitun.kittu");
+                return new PasswordAuthentication("noreply1445@gmail.com","14451445");
             }
         };
         Session session = Session.getInstance(properties, auth);
@@ -51,7 +51,7 @@ public class MailSender {
         // creates a new e-mail message
         Message msg = new MimeMessage(session);
  
-        msg.setFrom(new InternetAddress("chinta.nitun93@gmail.com"));
+        msg.setFrom(new InternetAddress("noreply1445@gmail.com"));
         InternetAddress[] toAddresses = { new InternetAddress(toAddress) };
         msg.setRecipients(Message.RecipientType.TO, toAddresses);
         msg.setSubject(subject);
