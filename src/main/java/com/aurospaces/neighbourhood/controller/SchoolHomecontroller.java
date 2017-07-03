@@ -171,10 +171,10 @@ public class SchoolHomecontroller {
 				}
 			}
 		}catch(Exception e){
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
 			logger.error(e.getMessage());
 			logger.fatal("error in userLogin method in school Homecontroller class HomePage method  ");
-			System.out.println(e);
 			return "loginHome1";
 			
 		}
@@ -210,8 +210,10 @@ public class SchoolHomecontroller {
 				session.setAttribute("message", "Invalid Credentials");
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class HomePage1 method  ");
 			session.setAttribute("message", "fail login");
 		}
 		return "redirect:HomePage";
@@ -234,8 +236,10 @@ public class SchoolHomecontroller {
 			}
 			return "redirect:HomePage.htm";
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class logoutHome method  ");
 		}
 		return "loginHome1";
 	}
@@ -263,8 +267,10 @@ public class SchoolHomecontroller {
 				  request.setAttribute("allOrders1", "''");
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class getaluminiHomePage method");
 		}
 		return "HomeControl2";
 	}
@@ -278,8 +284,10 @@ public class SchoolHomecontroller {
 		String sJson = null;
 		try{
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class dashBoard method");
 		}
 		return "dashBoard";
 	}
@@ -322,8 +330,10 @@ public class SchoolHomecontroller {
 			}*/
 			
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class addclass method");
 			session.setAttribute("message", "fail");
 		}
 
@@ -346,8 +356,10 @@ public class SchoolHomecontroller {
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class getClassFee method");
 		}
 
 		return sJson;  
@@ -377,8 +389,10 @@ public class SchoolHomecontroller {
 				 // System.out.println(sJson); 
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class deleteClass method");
 			session.setAttribute("message", "Failed");
 		}
 
@@ -406,8 +420,10 @@ public class SchoolHomecontroller {
 //				session.setAttribute("message", "No Records found");
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class getaddFaculty method");
 		}
 		return "facultyHome";
 	}
@@ -456,8 +472,10 @@ public class SchoolHomecontroller {
 			}
 		
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class facultySubmit method");
 			session.setAttribute("message", "fail");
 		}
 
@@ -491,8 +509,10 @@ public class SchoolHomecontroller {
 				  request.setAttribute("allOrders1", "''");
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class deleteFaculty method");
 		}
 		return sJson;
 	}
@@ -517,8 +537,10 @@ public class SchoolHomecontroller {
 				  request.setAttribute("allOrders1", "''");
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class addFacultySubject method");
 		}
 		return "facultySubject";
 	}
@@ -560,8 +582,10 @@ public class SchoolHomecontroller {
 			}
 			
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class addFacultySubjects method");
 		}
 
 		return "redirect:facultySubject";
@@ -589,8 +613,10 @@ public class SchoolHomecontroller {
 			}
 			
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class deleteFacultySubject method");
 		}
 
 		return listOrderBeans;
@@ -618,8 +644,10 @@ public class SchoolHomecontroller {
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class studentHome method");
 		}
 
 		return "studentHome";  
@@ -728,8 +756,10 @@ public class SchoolHomecontroller {
 			}
 			
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class addStudent method");
 			session.setAttribute("message", "Failed");
 		}
 
@@ -754,8 +784,10 @@ public class SchoolHomecontroller {
 				 // System.out.println(sJson); 
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class getDueFee method");
 		}
 
 		return sJson;
@@ -781,8 +813,10 @@ public class SchoolHomecontroller {
 				 // System.out.println(sJson); 
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class deleteStudent method");
 		}
 
 		return listOrderBeans;
@@ -812,8 +846,10 @@ public class SchoolHomecontroller {
 				  request.setAttribute("baseUrl", baseUrl);
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class viewStudent method");
 		}
 
 		return "viewStudent";
@@ -842,8 +878,10 @@ GROUP BY sf.studentId*/
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class studentFeeHome method");
 		}
 
 		return "studentFeeHome";  
@@ -865,8 +903,10 @@ GROUP BY sf.studentId*/
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class addStudentFee method");
 		}
 
 		return "redirect:studentFeeHome";  
@@ -892,8 +932,10 @@ GROUP BY sf.studentId*/
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class viewStudentFee method");
 		}
 
 		return "viewStudentFee";  
@@ -930,8 +972,10 @@ GROUP BY sf.studentId*/
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class searchStudentFee1 method");
 		}
 
 		return sJson;  
@@ -960,8 +1004,10 @@ GROUP BY sf.studentId*/
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class getPrintFee method");
 		}
 
 		return sJson;  
@@ -987,8 +1033,10 @@ GROUP BY sf.studentId*/
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class attendance method");
 		}
 
 		return "attendanceHome";  
@@ -1061,8 +1109,10 @@ GROUP BY sf.studentId*/
 			return studentDao.getallStudentDetails(boardName,medium,className,section,email,caste,admissionNum,studentName);
 
 		} catch (Exception e) {
-			e.printStackTrace();
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class getStudentDetails method");
 		} finally {
 
 		}
@@ -1090,8 +1140,10 @@ GROUP BY sf.studentId*/
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class viewAttendanceHome method");
 		}
 
 		return "viewAttendance";  
@@ -1123,8 +1175,10 @@ GROUP BY sf.studentId*/
 			}*/
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class viewAttendance method");
 		}
 
 		return attendanceDao.getAttendance(objClassBean);  
@@ -1221,8 +1275,10 @@ try {
 
 
 		} catch (Exception e) {
-			e.printStackTrace();
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class sendAttendance method");
 			message1 = "fail";
 			session.setAttribute("message", "Fail to Send Message/Email");
 		} finally {
@@ -1333,8 +1389,10 @@ try {
 				outStream.flush();
 			}
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class exportStudent method");
 		}
 
 		return null;  
@@ -1347,8 +1405,10 @@ try {
 		try{
 			
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class importStudent method");
 		}
 		return "ImportStudent";
 	}
@@ -1447,8 +1507,11 @@ try {
 			}
 //			model.addAttribute("lstUser", lstUser);
 		} catch (Exception e) {
-			e.printStackTrace();
 			transactionManager.rollback(objTransStatus);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class processExcel method");
 		}
 		return null;
 	}
@@ -1487,7 +1550,10 @@ try {
 		//System.out.println("listServiceUnit1.size()==="+listServiceUnit1.size());
 		request.setAttribute("seviceList", json);
 		}catch(Exception e){
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class getSectionFilter method");
 		}
 	  return json;
 
@@ -1513,7 +1579,10 @@ try {
 		//System.out.println("listServiceUnit1.size()==="+listServiceUnit1.size());
 		request.setAttribute("seviceList", json);
 		}catch(Exception e){
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class getMediumFilter method");
 		}
 	  return json;
 
@@ -1546,7 +1615,10 @@ try {
 				 request.setAttribute("allOrders1", sJson);
 			}
 		}catch(Exception e){
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class studentFilterDropdown method");
 		}
 	  return listOrderBeans;
 
@@ -1576,7 +1648,10 @@ try {
 			String sSql = "select id,name from boardname";
 			statesMap = objPopulateService.populatePopUp(sSql);
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class populateCateogrys method");
 		} finally {
 		}
 		return statesMap;
@@ -1588,7 +1663,10 @@ try {
 			String sSql = "select id,name from classtable";
 			statesMap = objPopulateService.populatePopUp(sSql);
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class allClasses method");
 		} finally {
 		}
 		return statesMap;
@@ -1600,7 +1678,10 @@ try {
 			String sSql = "select id,name from sectiontable";
 			statesMap = objPopulateService.populatePopUp(sSql);
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class allSection method");
 		} finally {
 		}
 		return statesMap;
@@ -1612,7 +1693,10 @@ try {
 			String sSql = "select id,name from mediam";
 			statesMap = objPopulateService.populatePopUp(sSql);
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class populateMediam method");
 		} finally {
 		}
 		return statesMap;
@@ -1625,7 +1709,10 @@ try {
 			String sSql = "select id,name from subject";
 			statesMap = objPopulateService.populatePopUp(sSql);
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class populateClass method");
 		} finally {
 		}
 		return statesMap;
@@ -1637,7 +1724,10 @@ try {
 			String sSql = "select id,name from faculty";
 			statesMap = objPopulateService.populatePopUp(sSql);
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class populatefaculty method");
 		} finally {
 		}
 		return statesMap;
@@ -1649,7 +1739,10 @@ try {
 			String sSql = "select id,name from student";
 			statesMap = objPopulateService.populatePopUp(sSql);
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class populateStudent method");
 		} finally {
 		}
 		return statesMap;
@@ -1691,7 +1784,10 @@ try {
 					   dest.write(data);
 			SendAttachmentInEmail.send( to , usermail , mailpassword, port,request);
 		}catch(Exception e){
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class backUpdata method");
 		}
 	  return "redirect:dashBoard.htm";
 
@@ -1720,7 +1816,10 @@ try {
 				 request.setAttribute("allOrders1", "''");
 			}
 		}catch(Exception e){
-			e.printStackTrace();
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class upCommingBirthDay method");
 		}
 	  return "eventsHome";
 
@@ -1748,8 +1847,10 @@ try {
 			}
 			//studentDao.save(objClassBean);
 		}catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
+//			e.printStackTrace();
+//			System.out.println(e);
+			logger.error(e.getMessage());
+			logger.fatal("error in userLogin method in school Homecontroller class upCommingBirthDay method");
 		}
 
 		return "viewEventsHome";  
